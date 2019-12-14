@@ -174,3 +174,10 @@ def player_numbers(name)
   end
   return result
 end
+
+def player_stats(name)
+  result = nil
+  stats = player_lookup(name)
+  stats.delete(:player_name)
+  return stats
+end
