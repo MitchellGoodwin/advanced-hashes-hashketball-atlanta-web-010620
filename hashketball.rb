@@ -268,7 +268,8 @@ def long_name_steals_a_ton?
       x = i
     end
   end
-  if player_lookup(player_with_longest_name)[:steals] > x[:steals]
+  player = player_lookup(player_with_longest_name)
+  if player[:steals] == x[:steals]
     return true 
   else
     return false 
