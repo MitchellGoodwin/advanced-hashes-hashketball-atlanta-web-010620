@@ -225,5 +225,15 @@ def winning_team
   stats[:home][:players].each do |i|
     home_score += i[:points]
   end
-  
+  stats[:away][:players].each do |i|
+    away_score += i[:points]
+  end
+  if home_score > away_score
+    result = stats[:home][:team_name]
+  elsif away_score > home_score
+    result = stats[:away][:team_name]
+  else
+    result = "Tie"
+  end
+  return result
 end
