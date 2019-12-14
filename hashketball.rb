@@ -217,3 +217,5 @@ def most_points_scored
   result = x[:player_name]
   return result
 end
+
+def winning_team
